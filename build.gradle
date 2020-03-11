@@ -111,7 +111,7 @@ dependencies {
 //    api platform("com.google.guava:guava:28.2-jre") {
 //        force = true
 //    }
-    api platform(group: 'org.mockito', name: 'mockito-core', version: '2.1.0') {
+    api (group: 'org.mockito', name: 'mockito-core', version: '2.1.0') {
         force = true
     }
 }
