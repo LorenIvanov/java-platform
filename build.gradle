@@ -1,0 +1,117 @@
+plugins {
+    id 'java-platform'
+}
+
+apply plugin: 'maven-publish'
+
+group 'com.softwaregroup.loro'
+version '1.0.2-SNAPSHOT'
+
+publishing {
+    publications {
+        myPlatform(MavenPublication) {
+            from components.javaPlatform
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+javaPlatform {
+    allowDependencies()
+}
+
+dependencies {
+    constraints {
+//        api group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+//        api group: 'com.google.crypto.tink', name: 'tink', version: '1.3.0-rc3'
+//        api group: 'net.jodah', name: 'failsafe', version: '2.3.1'
+//        api group: 'org.apache.camel', name: 'camel-core', version: '3.0.0'
+//        api group: 'org.apache.camel', name: 'camel-rabbitmq', version: '3.0.0'
+//        api group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+//        api group: 'org.apache.commons', name: 'commons-pool2', version: '2.8.0'
+//        api group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.10'
+//        api group: 'org.jetbrains', name: 'annotations', version: '18.0.0'
+//        api group: 'org.hibernate', name: 'hibernate-core', version: '5.4.4.Final'
+//        api group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.4.4.Final'
+//        api 'org.slf4j:slf4j-log4j12:2.0.0-alpha1'
+//        api 'org.apache.logging.log4j:log4j-core:2.13.1'
+//        api 'org.apache.logging.log4j:log4j-slf4j-impl:2.13.1'
+//        api group: 'org.yaml', name: 'snakeyaml', version: '1.25'
+//        api("com.google.guava:guava:28.2-jre")
+        api group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+
+//        runtime group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+//        runtime group: 'com.google.crypto.tink', name: 'tink', version: '1.3.0-rc3'
+//        runtime group: 'net.jodah', name: 'failsafe', version: '2.3.1'
+//        runtime group: 'org.apache.camel', name: 'camel-core', version: '3.0.0'
+//        runtime group: 'org.apache.camel', name: 'camel-rabbitmq', version: '3.0.0'
+//        runtime group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+//        runtime group: 'org.apache.commons', name: 'commons-pool2', version: '2.8.0'
+//        runtime group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.10'
+//        runtime group: 'org.jetbrains', name: 'annotations', version: '18.0.0'
+//        runtime group: 'org.hibernate', name: 'hibernate-core', version: '5.4.4.Final'
+//        runtime group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.4.4.Final'
+//        runtime 'org.slf4j:slf4j-log4j12:2.0.0-alpha1'
+//        runtime 'org.apache.logging.log4j:log4j-core:2.13.1'
+//        runtime 'org.apache.logging.log4j:log4j-slf4j-impl:2.13.1'
+//        runtime group: 'org.yaml', name: 'snakeyaml', version: '1.25'
+//        api("com.google.guava:guava:28.2-jre")
+        runtime group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+    }
+
+//    api platform(group: 'com.google.code.gson', name: 'gson', version: '2.8.6') {
+//        force = true
+//    }
+//    api platform(group: 'com.google.crypto.tink', name: 'tink', version: '1.3.0-rc3') {
+//        force = true
+//    }
+//    api platform(group: 'net.jodah', name: 'failsafe', version: '2.3.1') {
+//        force = true
+//    }
+//    api platform(group: 'org.apache.camel', name: 'camel-core', version: '3.0.0') {
+//        force = true
+//    }
+//    api platform(group: 'org.apache.camel', name: 'camel-rabbitmq', version: '3.0.0') {
+//        force = true
+//    }
+//    api platform(group: 'org.apache.commons', name: 'commons-lang3', version: '3.9') {
+//        force = true
+//    }
+//    api platform(group: 'org.apache.commons', name: 'commons-pool2', version: '2.8.0') {
+//        force = true
+//    }
+//    api platform(group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.10') {
+//        force = true
+//    }
+//    api platform(group: 'org.jetbrains', name: 'annotations', version: '18.0.0') {
+//        force = true
+//    }
+//    api platform(group: 'org.hibernate', name: 'hibernate-core', version: '5.4.4.Final') {
+//        force = true
+//    }
+//    api platform(group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.4.4.Final') {
+//        force = true
+//    }
+//    api platform('org.slf4j:slf4j-log4j12:2.0.0-alpha1') {
+//        force = true
+//    }
+//    api platform('org.apache.logging.log4j:log4j-core:2.13.1') {
+//        force = true
+//    }
+//    api platform('org.apache.logging.log4j:log4j-slf4j-impl:2.13.1') {
+//        force = true
+//    }
+//    api platform(group: 'org.yaml', name: 'snakeyaml', version: '1.25') {
+//        force = true
+//    }
+//    api platform("com.google.guava:guava:28.2-jre") {
+//        force = true
+//    }
+    api platform(group: 'org.mockito', name: 'mockito-core', version: '2.1.0') {
+        force = true
+    }
+}
